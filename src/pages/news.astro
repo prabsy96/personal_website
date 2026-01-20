@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsCard from '../components/NewsCard.astro';
+
+const allNews = [
+  {
+    title: 'Website Launch',
+    date: '2026-01-20',
+    description: 'Launched my new personal research website built with Astro.',
+    href: '/news/2026-01-20-site-launch'
+  },
+  {
+    title: 'Paper Accepted at Conference',
+    date: '2025-12-15',
+    description: 'Placeholder: Our paper on [topic] was accepted at [conference].',
+    href: '#'
+  },
+  {
+    title: 'Research Milestone',
+    date: '2025-11-01',
+    description: 'Placeholder: Achieved significant milestone in ongoing research project.',
+    href: '#'
+  },
+  {
+    title: 'Talk at University',
+    date: '2025-10-10',
+    description: 'Placeholder: Gave an invited talk at [university] on [topic].',
+    href: '#'
+  }
+];
+---
+
+<BaseLayout title="News" description="Latest news and updates from Prabhu Vellaisamy.">
+  <header class="page-header">
+    <h1>News</h1>
+    <p class="subtitle">Updates, announcements, and milestones</p>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">2026</h2>
+    {allNews.filter(n => n.date.startsWith('2026')).map(news => (
+      <NewsCard
+        title={news.title}
+        date={news.date}
+        description={news.description}
+        href={news.href}
+      />
+    ))}
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">2025</h2>
+    {allNews.filter(n => n.date.startsWith('2025')).map(news => (
+      <NewsCard
+        title={news.title}
+        date={news.date}
+        description={news.description}
+        href={news.href}
+      />
+    ))}
+  </section>
+</BaseLayout>

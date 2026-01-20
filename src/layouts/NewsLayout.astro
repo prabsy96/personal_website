@@ -1,0 +1,62 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    date: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="news-article">
+    <header class="article-header">
+      <h1>{frontmatter.title}</h1>
+      <time datetime={frontmatter.date}>{formattedDate}</time>
+    </header>
+    <div class="article-content">
+      <slot />
+    </div>
+    <footer class="article-footer">
+      <a href="/news">&larr; Back to News</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .news-article {
+    max-width: 700px;
+  }
+
+  .article-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .article-header h1 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .article-header time {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+  }
+
+  .article-content {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .article-footer {
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

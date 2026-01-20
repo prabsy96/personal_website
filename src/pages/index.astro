@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="Personal research website of Prabhu Vellaisamy - researcher in computer science.">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Prabhu Vellaisamy</h1>
+      <p class="tagline">Researcher in Computer Science</p>
+      <p class="bio">
+        Welcome to my personal research website. I am a researcher working on
+        problems at the intersection of [your research areas]. My work focuses on
+        developing [brief description of your research focus].
+      </p>
+      <div class="hero-links">
+        <a href="/resume.pdf" class="btn">Download CV</a>
+        <a href="/research" class="btn btn-outline">View Research</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Research Interests</h2>
+    <ul class="interests-list">
+      <li>Research Area 1 - Brief description of your interest in this area</li>
+      <li>Research Area 2 - Brief description of your interest in this area</li>
+      <li>Research Area 3 - Brief description of your interest in this area</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Recent News</h2>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-content">Website launched! Check out my <a href="/research">research</a> and <a href="/projects">projects</a>.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Dec 2025</span>
+        <span class="news-content">Placeholder for recent news item - paper accepted, talk given, etc.</span>
+      </li>
+    </ul>
+    <p><a href="/news">View all news &rarr;</a></p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Selected Publications</h2>
+    <div class="publication">
+      <p class="publication-title">Example Paper Title: A Study in Placeholder Content</p>
+      <p class="publication-authors"><strong>P. Vellaisamy</strong>, A. Coauthor, B. Collaborator</p>
+      <p class="publication-venue">Conference on Example Research (CER), 2025</p>
+      <div class="publication-links">
+        <a href="#">[Paper]</a>
+        <a href="#">[Code]</a>
+        <a href="#">[Slides]</a>
+      </div>
+    </div>
+    <p><a href="/research">View all publications &rarr;</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .bio {
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .hero-links {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .interests-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .interests-list li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .interests-list li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Research" description="Publications and research work by Prabhu Vellaisamy.">
+  <header class="page-header">
+    <h1>Research</h1>
+    <p class="subtitle">Publications, preprints, and ongoing work</p>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Publications</h2>
+
+    <div class="publication">
+      <p class="publication-title">Example Paper Title: A Comprehensive Study</p>
+      <p class="publication-authors"><strong>P. Vellaisamy</strong>, A. Coauthor, B. Collaborator</p>
+      <p class="publication-venue">International Conference on Machine Learning (ICML), 2025</p>
+      <p class="publication-abstract">
+        Abstract: This paper presents a novel approach to solving [problem]. We demonstrate
+        that our method achieves state-of-the-art results on [benchmark] while maintaining
+        computational efficiency.
+      </p>
+      <div class="publication-links">
+        <a href="#">[Paper]</a>
+        <a href="#">[Code]</a>
+        <a href="#">[Slides]</a>
+        <a href="#">[BibTeX]</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">Another Research Paper: Methods and Applications</p>
+      <p class="publication-authors">A. Firstauthor, <strong>P. Vellaisamy</strong>, C. Thirdauthor</p>
+      <p class="publication-venue">Neural Information Processing Systems (NeurIPS), 2024</p>
+      <p class="publication-abstract">
+        Abstract: We introduce a new framework for [task]. Our experiments show significant
+        improvements over existing baselines across multiple datasets.
+      </p>
+      <div class="publication-links">
+        <a href="#">[Paper]</a>
+        <a href="#">[Code]</a>
+        <a href="#">[Dataset]</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <p class="publication-title">Foundational Work in Research Area</p>
+      <p class="publication-authors"><strong>P. Vellaisamy</strong>, D. Advisor</p>
+      <p class="publication-venue">Journal of Computer Science Research, 2024</p>
+      <p class="publication-abstract">
+        Abstract: This journal article provides a comprehensive analysis of [topic],
+        establishing theoretical foundations and practical guidelines for future research.
+      </p>
+      <div class="publication-links">
+        <a href="#">[Paper]</a>
+        <a href="#">[Supplementary]</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Preprints & Working Papers</h2>
+
+    <div class="publication">
+      <p class="publication-title">Work in Progress: Exploring New Directions</p>
+      <p class="publication-authors"><strong>P. Vellaisamy</strong>, E. Newcollaborator</p>
+      <p class="publication-venue">arXiv preprint, 2025</p>
+      <div class="publication-links">
+        <a href="#">[arXiv]</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Talks & Presentations</h2>
+    <ul>
+      <li>
+        <strong>"Research Topic Overview"</strong> - Conference Workshop, January 2025
+        <a href="#">[Slides]</a>
+      </li>
+      <li>
+        <strong>"Technical Deep Dive"</strong> - University Seminar Series, November 2024
+        <a href="#">[Video]</a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .publication-abstract {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+  }
+</style>

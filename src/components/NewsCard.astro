@@ -1,0 +1,81 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  description?: string;
+  href: string;
+}
+
+const { title, date, description, href } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+---
+
+<article class="news-card">
+  <time class="news-card-date" datetime={date}>{formattedDate}</time>
+  <div class="news-card-content">
+    <h3 class="news-card-title">
+      <a href={href}>{title}</a>
+    </h3>
+    {description && <p class="news-card-description">{description}</p>}
+  </div>
+</article>
+
+<style>
+  .news-card {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .news-card:last-child {
+    border-bottom: none;
+  }
+
+  .news-card-date {
+    flex-shrink: 0;
+    width: 100px;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+  }
+
+  .news-card-content {
+    flex: 1;
+  }
+
+  .news-card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 var(--spacing-xs) 0;
+  }
+
+  .news-card-title a {
+    color: var(--color-heading);
+  }
+
+  .news-card-title a:hover {
+    color: var(--color-link);
+  }
+
+  .news-card-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 600px) {
+    .news-card {
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+
+    .news-card-date {
+      width: auto;
+    }
+  }
+</style>

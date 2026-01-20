@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Contact information for Prabhu Vellaisamy.">
+  <header class="page-header">
+    <h1>Contact</h1>
+    <p class="subtitle">Get in touch</p>
+  </header>
+
+  <section class="section">
+    <p>
+      I'm always happy to hear from fellow researchers, students, and anyone interested
+      in my work. Feel free to reach out through any of the channels below.
+    </p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+        </p>
+        <p class="contact-note">For research inquiries, collaborations, or general questions.</p>
+      </div>
+
+      <div class="contact-item">
+        <h3>Office</h3>
+        <p>
+          Room XXX, Building Name<br>
+          University Name<br>
+          City, State ZIP
+        </p>
+      </div>
+
+      <div class="contact-item">
+        <h3>Profiles</h3>
+        <ul class="profile-links">
+          <li><a href="https://github.com/prabhu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://linkedin.com/in/prabhu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://twitter.com/prabhu" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">For Students</h2>
+    <p>
+      If you're a student interested in research opportunities, please include
+      the following in your email:
+    </p>
+    <ul>
+      <li>Your CV or resume</li>
+      <li>A brief description of your research interests</li>
+      <li>Any relevant coursework or projects</li>
+      <li>What you hope to gain from the experience</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Response Time</h2>
+    <p>
+      I try to respond to all emails within a week. If you haven't heard back,
+      feel free to send a follow-up. For urgent matters, please mention it in
+      your subject line.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-info {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .contact-item h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+  }
+
+  .contact-item p {
+    margin: 0 0 var(--spacing-xs) 0;
+  }
+
+  .contact-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  .profile-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .profile-links li {
+    margin: 0;
+  }
+
+  @media (min-width: 600px) {
+    .contact-info {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

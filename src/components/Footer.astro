@@ -1,0 +1,61 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p class="copyright">
+      &copy; {currentYear} Prabhu Vellaisamy. All rights reserved.
+    </p>
+    <nav class="footer-links">
+      <a href="/resume.pdf">CV</a>
+      <a href="https://github.com/prabhu" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-alt);
+    margin-top: auto;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .copyright {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-link);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

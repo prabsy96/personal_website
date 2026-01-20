@@ -34,9 +34,13 @@ Automatic via GitHub Actions on push to `main`. Builds with Node 20, deploys to 
 
 ## Resume Handling
 
-- Current location: `public/resume.pdf` (accessible at `/resume.pdf`)
+- Current location: `public/resume.pdf` (accessible at `/personal_website/resume.pdf`)
 - Also: `public/PrabhuVellaisamyResume_2025.pdf` (legacy path)
 - When updating, overwrite existing file to maintain stable URLs
+
+## Important: Base Path
+
+Site is deployed at `/personal_website` subpath. Use relative paths or Astro's built-in URL handling—avoid hardcoded absolute paths starting with `/`.
 
 ## Guidelines
 

@@ -30,7 +30,7 @@ npm run preview  # Preview production build locally
 
 ## Deployment
 
-Automatic via GitHub Actions on push to `main`. Builds with Node 20, deploys to GitHub Pages. See `.github/workflows/deploy.yml`.
+Automatic via GitHub Actions on push to `main`. Builds with Node 20, deploys to GitHub Pages. See `.github/workflows/astro.yml`.
 
 ## Resume Handling
 

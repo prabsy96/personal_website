@@ -2,19 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Home" description="Personal research website of Prabhu Vellaisamy - researcher in computer science.">
+<BaseLayout title="Home" description="Personal research website of Prabhu Vellaisamy - PhD candidate at Carnegie Mellon University researching unary computing, deep learning architectures, and LLM inference optimization.">
   <section class="hero">
     <div class="hero-content">
       <h1>Prabhu Vellaisamy</h1>
-      <p class="tagline">Researcher in Computer Science</p>
+      <p class="tagline">PhD Candidate in Electrical and Computer Engineering</p>
       <p class="bio">
-        Welcome to my personal research website. I am a researcher working on
-        problems at the intersection of [your research areas]. My work focuses on
-        developing [brief description of your research focus].
+        I am a PhD candidate at Carnegie Mellon University, advised by Prof. John Paul Shen.
+        My research focuses on unary computing for AI, deep learning architecture design,
+        and optimizing large language model inference on modern hardware. I am a 2023 Qualcomm
+        Innovation Fellowship winner.
       </p>
       <div class="hero-links">
-        <a href="/resume.pdf" class="btn">Download CV</a>
-        <a href="/research" class="btn btn-outline">View Research</a>
+        <a href="PrabhuVellaisamyResume_2025.pdf" class="btn">Download CV</a>
+        <a href="research" class="btn btn-outline">View Research</a>
       </div>
     </div>
   </section>
@@ -22,9 +23,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <h2 class="section-title">Research Interests</h2>
     <ul class="interests-list">
-      <li>Research Area 1 - Brief description of your interest in this area</li>
-      <li>Research Area 2 - Brief description of your interest in this area</li>
-      <li>Research Area 3 - Brief description of your interest in this area</li>
+      <li><strong>Unary Computing for AI</strong> - Energy-efficient arithmetic designs using temporal and stochastic representations for deep learning accelerators</li>
+      <li><strong>Deep Learning Architecture Design</strong> - Custom hardware accelerators, GEMM units, and convolution cores for edge AI inference</li>
+      <li><strong>LLM Inference Optimization</strong> - Profiling and optimizing large language model workloads on CPU-GPU coupled architectures</li>
+      <li><strong>Neuromorphic Computing</strong> - Temporal Neural Networks (TNNs) and automated design frameworks for sensory processing</li>
     </ul>
   </section>
 
@@ -32,30 +34,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2 class="section-title">Recent News</h2>
     <ul class="news-list">
       <li class="news-item">
-        <span class="news-date">Jan 2026</span>
-        <span class="news-content">Website launched! Check out my <a href="/research">research</a> and <a href="/projects">projects</a>.</span>
+        <span class="news-date">May 2026</span>
+        <span class="news-content">Starting AI Research Scientist Internship at Samsung Semiconductor Inc.</span>
       </li>
       <li class="news-item">
-        <span class="news-date">Dec 2025</span>
-        <span class="news-content">Placeholder for recent news item - paper accepted, talk given, etc.</span>
+        <span class="news-date">2026</span>
+        <span class="news-content">Paper "Mugi: Value Level Parallelism for Efficient LLMs" accepted at ASPLOS 2026.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025</span>
+        <span class="news-content">Received <strong>Amar Mukherjee Best Paper Award</strong> at ISVLSI 2025 for "Catwalk" paper.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">May 2025</span>
+        <span class="news-content">Invited talk at Jülich Supercomputing Center on LLM inference optimization.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025</span>
+        <span class="news-content">Papers accepted at ISPASS 2025 and DATE 2025.</span>
       </li>
     </ul>
-    <p><a href="/news">View all news &rarr;</a></p>
+    <p><a href="news">View all news &rarr;</a></p>
   </section>
 
   <section class="section">
     <h2 class="section-title">Selected Publications</h2>
     <div class="publication">
-      <p class="publication-title">Example Paper Title: A Study in Placeholder Content</p>
-      <p class="publication-authors"><strong>P. Vellaisamy</strong>, A. Coauthor, B. Collaborator</p>
-      <p class="publication-venue">Conference on Example Research (CER), 2025</p>
-      <div class="publication-links">
-        <a href="#">[Paper]</a>
-        <a href="#">[Code]</a>
-        <a href="#">[Slides]</a>
-      </div>
+      <p class="publication-title">Mugi: Value Level Parallelism for Efficient LLMs</p>
+      <p class="publication-authors">D. Price, <strong>P. Vellaisamy</strong>, JP. Shen, D. Wu</p>
+      <p class="publication-venue">ASPLOS 2026</p>
     </div>
-    <p><a href="/research">View all publications &rarr;</a></p>
+    <div class="publication">
+      <p class="publication-title">Catwalk: Unary Top-K for Efficient Ramp-No-Leak Neuron Design for Temporal Neural Networks</p>
+      <p class="publication-authors">D. Lister, <strong>P. Vellaisamy</strong>, JP. Shen, D. Wu</p>
+      <p class="publication-venue">ISVLSI 2025 <span class="award">Best Paper Award</span></p>
+    </div>
+    <div class="publication">
+      <p class="publication-title">Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures</p>
+      <p class="publication-authors"><strong>P. Vellaisamy</strong>, T. Labonte, S. Chakraborty, M. Turner, S. Sury, JP. Shen</p>
+      <p class="publication-venue">ISPASS 2025</p>
+    </div>
+    <p><a href="research">View all publications &rarr;</a></p>
   </section>
 </BaseLayout>
 
@@ -100,6 +119,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .interests-list li:last-child {
     border-bottom: none;
+  }
+
+  .award {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   @media (max-width: 600px) {

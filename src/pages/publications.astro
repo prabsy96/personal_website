@@ -2,14 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Research" description="Publications and research work by Prabhu Vellaisamy.">
+<BaseLayout title="Publications" description="Research publications by Prabhu Vellaisamy - conference papers, journal articles, and workshop papers on unary computing, deep learning architectures, and LLM inference.">
   <header class="page-header">
-    <h1>Research</h1>
-    <p class="subtitle">Publications, presentations, and ongoing work</p>
+    <h1>Publications</h1>
+    <p class="subtitle">Conference papers, journal articles, and workshop papers</p>
   </header>
 
   <section class="section">
-    <h2 class="section-title">Publications</h2>
+    <h2 class="section-title">Conference & Journal Papers</h2>
 
     <div class="publication">
       <p class="publication-title">Mugi: Value Level Parallelism for Efficient LLMs</p>
@@ -56,7 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="publication">
       <p class="publication-title">TNNGen: Automated Design of Neuromorphic Sensory Processing Units for Time-Series Clustering</p>
       <p class="publication-authors"><strong>P. Vellaisamy</strong>, H. Nair, D. Gupta, V. Ratnakaram, JP. Shen</p>
-      <p class="publication-venue">ISCAS 2024, TCAS-II 2024</p>
+      <p class="publication-venue">ISCAS 2024 <span class="journal-badge">TCAS-II 2024</span></p>
     </div>
 
     <div class="publication">
@@ -99,88 +99,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="publication-venue">Young Architect Workshop (YArch), ASPLOS 2022</p>
     </div>
   </section>
-
-  <section class="section">
-    <h2 class="section-title">Talks & Presentations</h2>
-    <ul class="talks-list">
-      <li>
-        <strong>"Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures"</strong><br>
-        <span class="talk-venue">Jülich Supercomputing Center (JSC), Germany (Remote) - May 20, 2025</span>
-        <span class="talk-type">Invited Talk</span>
-      </li>
-      <li>
-        <strong>"Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures"</strong><br>
-        <span class="talk-venue">ISPASS 2025, Ghent, Belgium - May 12, 2025</span>
-      </li>
-      <li>
-        <strong>"Tempus Core: Area-Power Efficient Temporal-Unary Convolution Core for Low-Precision Edge DLAs"</strong><br>
-        <span class="talk-venue">DATE 2025, Lyon, France - April 1, 2025</span>
-      </li>
-      <li>
-        <strong>"OzMAC: An Energy-Efficient Sparsity-Exploiting Multiply-Accumulate-Unit Design for DL Inference"</strong><br>
-        <span class="talk-venue">VLSI-SoC 2024, Tangier, Morocco - October 7, 2024</span>
-      </li>
-      <li>
-        <strong>"Exploration of Unary Arithmetic-Based Matrix Multiply Units for Low Precision DL Accelerators"</strong><br>
-        <span class="talk-venue">ISVLSI 2024, Knoxville, TN - July 2, 2024</span>
-      </li>
-      <li>
-        <strong>"TNNGen: Automated Design of Neuromorphic Sensory Processing Units for Time-Series Clustering"</strong><br>
-        <span class="talk-venue">ISCAS 2024, Singapore - May 21, 2024</span>
-      </li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">Fellowships & Awards</h2>
-    <div class="awards-grid">
-      <div class="award-card featured">
-        <div class="award-icon">*</div>
-        <div class="award-content">
-          <h3 class="award-title">Qualcomm Innovation Fellowship</h3>
-          <p class="award-detail">North America Winner, 2023</p>
-        </div>
-      </div>
-      <div class="award-card featured">
-        <div class="award-icon">*</div>
-        <div class="award-content">
-          <h3 class="award-title">Amar Mukherjee Best Paper Award</h3>
-          <p class="award-detail">ISVLSI 2025</p>
-        </div>
-      </div>
-      <div class="award-card featured">
-        <div class="award-icon">*</div>
-        <div class="award-content">
-          <h3 class="award-title">Carnegie Institute of Technology Dean's Fellowship</h3>
-          <p class="award-detail">Carnegie Mellon University</p>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-content">
-          <h3 class="award-title">DAC Young Fellow</h3>
-          <p class="award-detail">Design Automation Conference, 2022</p>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-content">
-          <h3 class="award-title">Young Architect</h3>
-          <p class="award-detail">ASPLOS 2022</p>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-content">
-          <h3 class="award-title">ISVLSI 2024 Travel Grant</h3>
-          <p class="award-detail">IEEE ISVLSI 2024</p>
-        </div>
-      </div>
-      <div class="award-card">
-        <div class="award-content">
-          <h3 class="award-title">CMU GSA Conference Grant</h3>
-          <p class="award-detail">Carnegie Mellon University</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -193,87 +111,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-weight: 600;
   }
 
-  .talks-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .talks-list li {
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .talks-list li:last-child {
-    border-bottom: none;
-  }
-
-  .talk-venue {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    margin-top: var(--spacing-xs);
-  }
-
-  .talk-type {
-    display: inline-block;
+  .journal-badge {
     background-color: #dbeafe;
     color: #1e40af;
-    padding: 0.1rem 0.4rem;
+    padding: 0.15rem 0.4rem;
     border-radius: 3px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    margin-top: var(--spacing-xs);
-  }
-
-  .awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .award-card {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: var(--spacing-md);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-  }
-
-  .award-card.featured {
-    background-color: #fffbeb;
-    border-color: #fbbf24;
-  }
-
-  .award-icon {
-    color: #f59e0b;
-    font-size: 1.2rem;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
-
-  .award-content {
-    flex: 1;
-  }
-
-  .award-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0 var(--spacing-xs) 0;
-    color: var(--color-heading);
-  }
-
-  .award-detail {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    margin: 0;
-  }
-
-  @media (max-width: 600px) {
-    .awards-grid {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
